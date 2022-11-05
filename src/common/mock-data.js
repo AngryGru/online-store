@@ -3,22 +3,33 @@ export const MOCK_DATA = [
     id: 1,
     image: "https://www.belconsole.by/pics/items/20220906120952380_ps4.jpg",
     title: "Hogwarts Legacy",
-    description:
-      "Genres: Action, Adventure, Role-playing | Release date: 10.02.2023 | 16+",
+    genres: "Action, Adventure, Role-playing",
+    motto: "Plunge into a new adventure in a magical world.",
+    age: "16+",
+    release_date: "10.02.2023",
+    languages: "EN",
     cost: "92$",
   },
   {
     id: 2,
     image: "https://www.belconsole.by/pics/items/rdr2_fob_ps4_rus.jpg",
     title: "Red Dead Redemption",
-    description: "Genres: Action, Open World | Release Date: 26.10.2018 | 18+",
+    genres: "Action",
+    motto: "Be loyal to what matters.",
+    age: "18+",
+    release_date: "26.10.2018",
+    languages: "EN, RU(sub)",
     cost: "38$",
   },
   {
     id: 3,
     image: "https://www.belconsole.by/pics/items/spider_man_ps4_cover.jpg",
     title: "Marvel's Spider-Man",
-    description: "Genres: Action | Release date: 28.08.2019 | 18+",
+    genres: "Action",
+    motto: "You haven't seen such a Spider-Man yet!",
+    age: "18+",
+    release_date: "28.08.2019",
+    languages: "EN, RU",
     cost: "32$",
   },
   {
@@ -26,15 +37,24 @@ export const MOCK_DATA = [
     image:
       "https://www.belconsole.by/pics/items/last-of-us-2-special-edition.jpg",
     title: "Last of us 2 Special edition",
-    description: "Genres: Action | Release Date: 19.06.2020 | 18+",
+    genres: "Action, Thriller",
+    motto:
+      "A deep, heartbreaking, exciting adventure awaits you - Ellie and Joel embark on an exciting journey to The Last of Us 2.",
+    age: "18+",
+    release_date: "19.06.2020",
+    languages: "EN, RU",
     cost: "58$",
   },
   {
     id: 5,
     image: "https://www.belconsole.by/pics/items/cp77_ps4_2d_ru_a.jpg",
     title: "Cyberpunk 2077",
-    description:
-      "Genres: Action, Adventure, Open World | Release date 10.12.2020 | 18+",
+    genres: "Action, Adventure, Open World ",
+    motto:
+      "Become a cyberpunk — an implant—equipped mercenary - and make a name for yourself on the streets of Night City.",
+    age: "18+",
+    release_date: "10.12.2020",
+    languages: "EN, RU",
     cost: "64$",
   },
   {
@@ -42,7 +62,11 @@ export const MOCK_DATA = [
     image:
       "https://www.belconsole.by/pics/items/cb4_ps4_reveal_packshot_f_ru.jpg",
     title: "CRASH BANDICOOT 4: ЭТО ВОПРОС ВРЕМЕНИ",
-    description: "Genres: Adventure | Release Date: 02.10.20 | 6+",
+    genres: "Adventure",
+    motto: "It's a matter of time.",
+    age: "6+",
+    release_date: "02.10.20",
+    languages: "EN, RU(sub)",
     cost: "60$",
   },
   {
@@ -50,7 +74,12 @@ export const MOCK_DATA = [
     image:
       "https://www.belconsole.by/pics/items/610e0352774d09f68400be22e03550f9_b.jpg",
     title: "Resident Evil 2",
-    description: "Genres: Action, Thriller | Release Date: 25.01.2019 | 18+",
+    genres: "Action, Thriller",
+    motto:
+      "The cult masterpiece that influenced the development of the whole genre returns twenty years later.",
+    age: "18+",
+    release_date: "25.01.2019",
+    languages: "EN, RU(sub)",
     cost: "48$",
   },
   {
@@ -58,7 +87,11 @@ export const MOCK_DATA = [
     image:
       "https://www.belconsole.by/pics/items/darksouls_remastered_ps4_packshot_pegiprov_preview.jpg",
     title: "Dark Souls Remastered",
-    description: "Genres: Role-playing | Release Date: 25.05.2018 | 16+",
+    genres: "Role-playing",
+    motto: "And then the fire appeared.",
+    age: "16+",
+    release_date: "25.05.2018",
+    languages: "EN, RU(sub)",
     cost: "34$",
   },
   {
@@ -66,7 +99,12 @@ export const MOCK_DATA = [
     image:
       "https://www.belconsole.by/pics/items/ps4_gotdc_ste_pksht_ft_rgb_ru_210709.jpg",
     title: "The Ghost of Tsushima Director's version",
-    description: "Genres: Action, Adventure | Release Date: 20.08.2021 | 18+",
+    genres: "Action, Adventure",
+    motto:
+      "You will have to reject the rules and come to victory over the invaders in your own way.",
+    age: "18+",
+    release_date: "20.08.2021",
+    languages: "EN, RU",
     cost: "59$",
   },
 ];
