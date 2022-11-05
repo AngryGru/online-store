@@ -1,6 +1,6 @@
 .header {
-  background-color: #e9f7ca;
-  background-color: #fefee3;
+  background-color: #e4e5ea;
+  border-bottom: 1px solid #d2d2d4;
   padding: 20px;
   display: flex;
   gap: 20px;
@@ -9,6 +9,6 @@
 .header-title {
   padding: 0;
   margin: 0;
-  /* color: #f9a03f; */
-  color: #ed7899;
+  /* color: #ed7899; */
+  color: #8d6c9f;
 }
