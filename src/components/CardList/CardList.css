@@ -1,0 +1,8 @@
+.card-list {
+  padding: 20px;
+  /* background-color: teal; */
+  background-color: #72caaf;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
