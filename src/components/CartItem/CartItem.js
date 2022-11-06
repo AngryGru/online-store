@@ -11,8 +11,11 @@ const CartItem = ({ cart, setCart }) => {
     return (
       <div className="item" key={item.id}>
         <div className="item-content">
-          <div className="item-title">{item.title}</div>
-          <div className="item-counter">{`${item.total_cost}$ × ${item.count}`}</div>
+          <img src={item.image} alt="item image" />
+          <div className="item-content__text">
+            <div className="item-title">{item.title}</div>
+            <div className="item-counter">{`${item.total_cost}$ × ${item.count}`}</div>
+          </div>
         </div>
         <div
           className="item-delete-btn"
