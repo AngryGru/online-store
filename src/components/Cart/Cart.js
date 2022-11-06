@@ -1,39 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import CartEmptyState from "../CartEmptyState/CartEmptyState";
+import CartItem from "../CartItem/CartItem";
+import Modal from "../Modal/Modal";
 import "./Cart.css";
 
 const Cart = ({ cart, setCart }) => {
-  const onDeleteFromCart = (id) => {
-    setCart((cart) => {
-      return cart.filter((item) => item.id !== id);
-    });
-  };
-
+  const [modalActive, setModalActive] = useState(false);
+  const totalCount = cart.reduce((acc, cur) => {
+    return acc + cur.total_cost;
+  }, 0);
   return (
     <div className="cart">
       <div className="cart-header">Cart</div>
       <div className="cart-items">
-        {cart.map((item) => {
-          return (
-            <div className="item" key={item.id}>
-              <div className="item-content">
-                <div className="item-title">{item.title}</div>
-                <div className="item-counter">{`${item.cost}$ × ${2}`}</div>
-              </div>
-              <div
-                className="item-delete-btn"
-                onClick={() => onDeleteFromCart(item.id)}
-              >
-                ✕
-              </div>
-            </div>
-          );
-        })}
+        {cart.length > 0 ? (
+          <CartItem cart={cart} setCart={setCart} />
+        ) : (
+          <CartEmptyState />
+        )}
       </div>
       <div className="cart-total">
         <p>Total:</p>
-        <p>{`${250}$`}</p>
+        <p>{`${totalCount}$`}</p>
       </div>
-      <button className="cart-checkout">CHECKOUT</button>
+      <button
+        className="cart-checkout"
+        onClick={() => {
+          setModalActive(true);
+          setCart([]);
+        }}
+      >
+        CHECKOUT
+      </button>
+      <Modal active={modalActive} setActive={setModalActive}>
+        <div className="content checkout-modal">
+          Thank you for the purchase!
+        </div>
+      </Modal>
     </div>
   );
 };

@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="main">
-        <CardList data={MOCK_DATA} cart={cart} setCart={setCart} />
+        <CardList mock_data={MOCK_DATA} cart={cart} setCart={setCart} />
         <Cart cart={cart} setCart={setCart} />
       </div>
     </div>

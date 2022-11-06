@@ -1,7 +1,16 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ id, image, title, genres, release_date, age, cost }) => {
+const Card = ({
+  id,
+  image,
+  title,
+  genres,
+  release_date,
+  age,
+  cost,
+  onClick,
+}) => {
   return (
     <div className="card">
       <div className="card-image">
@@ -19,7 +28,9 @@ const Card = ({ id, image, title, genres, release_date, age, cost }) => {
         <div className="card-description">{`Genres: ${genres} | Release date: ${release_date} | ${age}`}</div>
         <div className="card-actions">
           <div className="card-actions__cost">{cost}$</div>
-          <button className="card-actions__btn">Buy</button>
+          <button className="card-actions__btn" onClick={onClick}>
+            Buy
+          </button>
         </div>
       </div>
     </div>

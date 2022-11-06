@@ -3,17 +3,41 @@ import "./CardList.css";
 import Card from "../Card/Card";
 import Modal from "../Modal/Modal";
 
-const CardList = ({ data, cart, setCart }) => {
+const CardList = ({ mock_data, cart, setCart }) => {
+  const data = mock_data.map((item) => {
+    return {
+      ...item,
+      count: 1,
+      total_cost: item.cost,
+    };
+  });
+
   const [modalActive, setModalActive] = useState(false);
   const [modalData, setModalData] = useState({});
 
-  const onCardClick = (card, event) => {
+  const onOpenCard = (card) => {
+    setModalActive(true);
+    setModalData(card);
+  };
+
+  const onAddToCart = (card, event) => {
     event.stopPropagation();
-    if (event.target.tagName === "BUTTON") {
-      setCart([...cart, card]);
+    const elem = cart.find((elem) => elem.id === card.id);
+    if (elem) {
+      setCart((cart) => {
+        return cart.map((item) => {
+          if (item === elem) {
+            return {
+              ...item,
+              count: item.count + 1,
+              total_cost: item.total_cost + item.cost,
+            };
+          }
+          return item;
+        });
+      });
     } else {
-      setModalActive(true);
-      setModalData(card);
+      setCart([...cart, card]);
     }
   };
 
@@ -25,7 +49,7 @@ const CardList = ({ data, cart, setCart }) => {
     <div className="card-list">
       {data.map((card) => {
         return (
-          <div key={card.id} onClick={(event) => onCardClick(card, event)}>
+          <div key={card.id} onClick={(event) => onOpenCard(card, event)}>
             <Card
               id={card.id}
               key={card.id}
@@ -37,6 +61,7 @@ const CardList = ({ data, cart, setCart }) => {
               age={card.age}
               languages={card.languages}
               cost={card.cost}
+              onClick={(event) => onAddToCart(card, event)}
             />
           </div>
         );
@@ -77,7 +102,10 @@ const CardList = ({ data, cart, setCart }) => {
           <button className="btns close-btn" onClick={onModalClose}>
             Close
           </button>
-          <button className="btns buy-btn" onClick={onModalClose}>
+          <button
+            className="btns buy-btn"
+            onClick={(event) => onAddToCart(modalData, event)}
+          >
             Buy
           </button>
         </div>
