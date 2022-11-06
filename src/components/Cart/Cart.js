@@ -1,22 +1,33 @@
 import React from "react";
 import "./Cart.css";
 
-const Cart = () => {
+const Cart = ({ cart, setCart }) => {
+  const onDeleteFromCart = (id) => {
+    setCart((cart) => {
+      return cart.filter((item) => item.id !== id);
+    });
+  };
+
   return (
     <div className="cart">
       <div className="cart-header">Cart</div>
       <div className="cart-items">
-        <div className="item">
-          <div className="item-content">
-            <div className="item-title">HOGWARTS LEGACY</div>
-            <div className="item-counter">{`${92}$ × ${2}`}</div>
-          </div>
-          <div className="item-delete-btn">✕</div>
-        </div>
-        <div className="item">
-          <div className="item-title">Item title</div>
-          <div className="item-counter">{`${50}$ × ${2}`}</div>
-        </div>
+        {cart.map((item) => {
+          return (
+            <div className="item" key={item.id}>
+              <div className="item-content">
+                <div className="item-title">{item.title}</div>
+                <div className="item-counter">{`${item.cost}$ × ${2}`}</div>
+              </div>
+              <div
+                className="item-delete-btn"
+                onClick={() => onDeleteFromCart(item.id)}
+              >
+                ✕
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div className="cart-total">
         <p>Total:</p>

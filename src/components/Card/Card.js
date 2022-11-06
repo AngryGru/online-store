@@ -18,7 +18,7 @@ const Card = ({ id, image, title, genres, release_date, age, cost }) => {
         <div className="card-title">{title.toUpperCase()}</div>
         <div className="card-description">{`Genres: ${genres} | Release date: ${release_date} | ${age}`}</div>
         <div className="card-actions">
-          <div className="card-actions__cost">{cost}</div>
+          <div className="card-actions__cost">{cost}$</div>
           <button className="card-actions__btn">Buy</button>
         </div>
       </div>

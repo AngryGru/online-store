@@ -8,7 +8,7 @@ export const MOCK_DATA = [
     age: "16+",
     release_date: "10.02.2023",
     languages: "EN",
-    cost: "92$",
+    cost: 92,
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const MOCK_DATA = [
     age: "18+",
     release_date: "26.10.2018",
     languages: "EN, RU(sub)",
-    cost: "38$",
+    cost: 38,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const MOCK_DATA = [
     age: "18+",
     release_date: "28.08.2019",
     languages: "EN, RU",
-    cost: "32$",
+    cost: 32,
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const MOCK_DATA = [
     age: "18+",
     release_date: "19.06.2020",
     languages: "EN, RU",
-    cost: "58$",
+    cost: 58,
   },
   {
     id: 5,
@@ -55,19 +55,19 @@ export const MOCK_DATA = [
     age: "18+",
     release_date: "10.12.2020",
     languages: "EN, RU",
-    cost: "64$",
+    cost: 64,
   },
   {
     id: 6,
     image:
       "https://www.belconsole.by/pics/items/cb4_ps4_reveal_packshot_f_ru.jpg",
-    title: "CRASH BANDICOOT 4: ЭТО ВОПРОС ВРЕМЕНИ",
+    title: "Crash Bandicoot 4: Это вопрос времени",
     genres: "Adventure",
     motto: "It's a matter of time.",
     age: "6+",
     release_date: "02.10.20",
     languages: "EN, RU(sub)",
-    cost: "60$",
+    cost: 60,
   },
   {
     id: 7,
@@ -80,7 +80,7 @@ export const MOCK_DATA = [
     age: "18+",
     release_date: "25.01.2019",
     languages: "EN, RU(sub)",
-    cost: "48$",
+    cost: 48,
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ export const MOCK_DATA = [
     age: "16+",
     release_date: "25.05.2018",
     languages: "EN, RU(sub)",
-    cost: "34$",
+    cost: 34,
   },
   {
     id: 9,
@@ -105,6 +105,6 @@ export const MOCK_DATA = [
     age: "18+",
     release_date: "20.08.2021",
     languages: "EN, RU",
-    cost: "59$",
+    cost: 59,
   },
 ];

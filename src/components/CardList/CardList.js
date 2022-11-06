@@ -3,16 +3,15 @@ import "./CardList.css";
 import Card from "../Card/Card";
 import Modal from "../Modal/Modal";
 
-const CardList = ({ data }) => {
+const CardList = ({ data, cart, setCart }) => {
   const [modalActive, setModalActive] = useState(false);
   const [modalData, setModalData] = useState({});
 
   const onCardClick = (card, event) => {
     event.stopPropagation();
     if (event.target.tagName === "BUTTON") {
-      console.log("BUY", card);
+      setCart([...cart, card]);
     } else {
-      console.log(card);
       setModalActive(true);
       setModalData(card);
     }
@@ -71,8 +70,7 @@ const CardList = ({ data }) => {
                 </tr>
               </tbody>
             </table>
-
-            <p className="modal-cost">{modalData.cost}</p>
+            <p className="modal-cost">{modalData.cost}$</p>
           </div>
         </div>
         <div className="actions">
