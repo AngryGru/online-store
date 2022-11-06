@@ -1,6 +1,6 @@
 .modal {
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   position: absolute;
   top: 0;
   left: 0;
@@ -19,81 +19,14 @@
   margin: 150px auto;
   padding: 20px;
   border-radius: 5px;
-  background-color: white;
+  background-color: #f8f8f8;
   width: 500px;
   transition: 0.4s all;
   text-align: center;
   font-size: 18px;
   border: 2px solid orange;
+  border: 3px solid #8d6c9f;
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-.content {
-  display: flex;
-  gap: 10px;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
-.modal-image {
-  width: 40%;
-}
-.modal-image img {
-  width: 100%;
-  height: auto;
-}
-.modal-info {
-  text-align: justify;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.modal-title {
-  padding-bottom: 5px;
-  text-align: center;
-  border-bottom: 1px solid lightgrey;
-  text-transform: uppercase;
-}
-.modal-motto {
-  font-size: 16px;
-  border-bottom: 1px solid lightgrey;
-  padding-bottom: 5px;
-}
-.modal-description {
-  font-size: 16px;
-}
-.option {
-  width: 35%;
-}
-.value {
-  text-align: left;
-}
-.modal-cost {
-  font-size: 20px;
-  font-weight: 700;
-  text-align: right;
-}
-.actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 20px;
-}
-.btns {
-  width: 80px;
-  height: 30px;
-  background-color: orange;
-  border: none;
-  color: white;
-  outline: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 15px;
-  text-align: center;
-}
-.close-btn {
-  background-color: gray;
 }
