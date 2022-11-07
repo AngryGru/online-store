@@ -52,7 +52,6 @@ const CardList = ({ mock_data, cart, setCart }) => {
           <div key={card.id} onClick={(event) => onOpenCard(card, event)}>
             <Card
               id={card.id}
-              // key={card.id}
               image={card.image}
               title={card.title}
               motto={card.motto}

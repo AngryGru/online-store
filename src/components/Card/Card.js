@@ -1,16 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({
-  id,
-  image,
-  title,
-  genres,
-  release_date,
-  age,
-  cost,
-  onClick,
-}) => {
+const Card = ({ image, title, genres, release_date, age, cost, onClick }) => {
   return (
     <div className="card">
       <div className="card-image">

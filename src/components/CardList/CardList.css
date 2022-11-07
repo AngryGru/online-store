@@ -6,3 +6,15 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+@media (max-width: 1260px) {
+  .card-list {
+    justify-content: center;
+    width: 55%;
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .card-list {
+    width: 100%;
+  }
+}

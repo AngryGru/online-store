@@ -24,11 +24,14 @@ const Cart = ({ cart, setCart }) => {
         <p>{`${totalCount}$`}</p>
       </div>
       <button
-        className="cart-checkout"
+        className={
+          cart.length ? "checkout-btn active-btn" : "checkout-btn disabled-btn"
+        }
         onClick={() => {
           setModalActive(true);
           setCart([]);
         }}
+        disabled={cart.length === 0}
       >
         CHECKOUT
       </button>
