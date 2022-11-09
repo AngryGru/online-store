@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import CardList from "./components/CardList/CardList";
 import Cart from "./components/Cart/Cart";
 import { MOCK_DATA } from "./common/mock-data";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -15,6 +16,7 @@ function App() {
         <CardList mock_data={MOCK_DATA} cart={cart} setCart={setCart} />
         <Cart cart={cart} setCart={setCart} />
       </div>
+      <Footer />
     </div>
   );
 }

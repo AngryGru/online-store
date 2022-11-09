@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="header">
       <Logo width={"70px"} height={"70px"} />
-      <h1 className="header-title">Geek's Alley</h1>
+      <h1 className="header-title">Geeks Alley</h1>
     </div>
   );
 };
