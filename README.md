@@ -30,6 +30,10 @@
 
 🔹 When you click the <b>Checkout</b> button, a small modal window with a message about a successful purchase is displayed and the basket is cleared.
 
+## Visual representation
+
+<img src="src/assets/page-image.png" alt="page appearance"/>
+
 ## Stack
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)

@@ -121,7 +121,7 @@ export const MOCK_DATA = [
   {
     id: 11,
     image: "https://www.belconsole.by/pics/items/nfshps42dpftru_cmyk.jpg",
-    title: "Need for speed heat",
+    title: "Need for speed: Heat",
     genres: "Racing",
     motto: "Conquer the darkness in pursuit of light.",
     age: "16+",
