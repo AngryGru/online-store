@@ -32,7 +32,7 @@
 
 ## Visual representation
 
-<img src="src/assets/page-image.png" alt="page appearance"/>
+<img src="src/assets/page-img.png" alt="page appearance"/>
 
 ## Stack
 
